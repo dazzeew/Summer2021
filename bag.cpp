@@ -16,15 +16,15 @@ public:
 
 	void SetItem(){
 		for (int i = 0; i < length; i++){
-			cout << "‚¢¥¤¨â¥ ­ §¢ ­¨¥ ¯à¥¤¬¥â : ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°: ";
 			string n;
 			cin >> n;
 			name.push_back(n);
-			cout << "‚¢¥¤¨â¥ æ¥­ã ¯à¥¤¬¥â : ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ½Ñƒ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°: ";
 			int wh;
 			cin >> wh;
 			price.push_back(wh);
-			cout << "‚¢¥¤¨â¥ ¢¥á ¯à¥¤¬¥â : ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÐµÑ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð°: ";
 			cin >> wh;
 			weight.push_back(wh);
 		}
@@ -158,16 +158,13 @@ void calculate(Items &items, Backpack &backpack){
 int main(){
 	setlocale(LC_ALL,"ru");
 	Backpack backpack;
-	cout << "‚¢¥¤¨â¥ ¢¬¥áâ¨¬®áâì àîª§ ª : ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¼ÐµÑÑ‚Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ñ€ÑŽÐºÐ·Ð°ÐºÐ°: ";
 	backpack.SetBagWeight();
 	Items items;
-	cout << "‚¢¥¤¨â¥ ª®«¨ç¥áâ¢® ¯à¥¤¬¥â®¢: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð¾Ð²: ";
 	items.SetLength();
 	items.SetItem();
 	calculate(items,backpack);
-	// items.PrintItems();
-	// for (int i = 0; i < 4; i++){
-	// 	cout << dec2bin(i) << endl;
-	// }
+
 
 }
